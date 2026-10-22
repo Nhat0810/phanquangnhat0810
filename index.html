@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phan Quang Nhật - Personal Portfolio</title>
+  
+  <!-- Favicon / Hình đại diện cho tab trình duyệt -->
+  <link rel="icon" type="image/webp" href="https://12a10.knotree.site/images/89841c32-0791-4eeb-aa29-b1787b3bb9f5.webp">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Family: Inter & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#f0f3ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              900: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Gradient Nền & Kính mờ (Glassmorphism) */
+    body {
+      background-color: #0b0f19;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: #f3f4f6;
+    }
+    
+    .glass-card {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+    }
+
+    /* Scrollbar tùy chỉnh */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0b0f19; }
+    ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header & Nav -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://12a10.knotree.site/images/89841c32-0791-4eeb-aa29-b1787b3bb9f5.webp" alt="Phan Quang Nhật" class="w-10 h-10 rounded-full object-cover border-2 border-indigo-500 group-hover:scale-105 transition-transform">
+        <span class="font-bold text-lg text-white group-hover:text-indigo-400 transition-colors">PQN.</span>
+      </a>
+      <span class="px-3 py-1 text-xs font-semibold bg-indigo-500/20 text-indigo-300 rounded-full border border-indigo-500/30">
+        12A10 - STT: 27
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="max-w-5xl mx-auto px-4 pt-28 pb-16 space-y-12">
+
+    <!-- 1. THÔNG TIN CƠ BẢN -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 relative overflow-hidden">
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+        <div class="relative group">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
+          <img src="https://12a10.knotree.site/images/89841c32-0791-4eeb-aa29-b1787b3bb9f5.webp" alt="Phan Quang Nhật" class="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl object-cover shadow-2xl">
+        </div>
+        <div class="text-center md:text-left space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            Học sinh THPT
+          </div>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+            Phan Quang Nhật
+          </h1>
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-300">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-cake-candles text-indigo-400"></i> Tuổi: <strong>18</strong></span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-indigo-400"></i> Lớp: <strong>12A10</strong></span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-hashtag text-indigo-400"></i> Số thứ tự: <strong>27</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. GIỚI THIỆU BẢN THÂN -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-user text-indigo-400"></i> 2. Giới thiệu bản thân
+      </h2>
+      <ul class="grid md:grid-cols-3 gap-4">
+        <li class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 flex items-start gap-3">
+          <i class="fa-solid fa-volleyball text-indigo-400 text-xl mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-white">Thể thao</h3>
+            <p class="text-sm text-gray-400">Thích chơi thể thao và rèn luyện thể chất.</p>
+          </div>
+        </li>
+        <li class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 flex items-start gap-3">
+          <i class="fa-solid fa-globe text-indigo-400 text-xl mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-white">Kinh tế thế giới</h3>
+            <p class="text-sm text-gray-400">Hay tìm hiểu về kinh tế toàn cầu và thị trường.</p>
+          </div>
+        </li>
+        <li class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 flex items-start gap-3">
+          <i class="fa-solid fa-guitar text-indigo-400 text-xl mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-white">Âm nhạc</h3>
+            <p class="text-sm text-gray-400">Biết đánh đàn và có niềm yêu thích hát ca.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3. HỌC VẤN -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-graduation-cap text-indigo-400"></i> 3. Học vấn
+      </h2>
+      <div class="p-4 rounded-xl bg-indigo-950/30 border border-indigo-500/20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="p-3 bg-indigo-600/20 rounded-lg text-indigo-400"><i class="fa-solid fa-school text-xl"></i></div>
+          <div>
+            <h3 class="font-bold text-white">Đang học lớp 12</h3>
+            <p class="text-sm text-gray-400">Trường THPT Trần Phú</p>
+          </div>
+        </div>
+        <span class="text-xs px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">Hiện tại</span>
+      </div>
+    </section>
+
+    <!-- 4. KỸ NĂNG -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-sliders text-indigo-400"></i> 4. Kỹ năng
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 space-y-1">
+          <div class="flex justify-between items-center text-sm font-semibold text-white">
+            <span><i class="fa-solid fa-utensils text-indigo-400 mr-2"></i>Nấu ăn</span>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 space-y-1">
+          <div class="flex justify-between items-center text-sm font-semibold text-white">
+            <span><i class="fa-solid fa-robot text-indigo-400 mr-2"></i>Sử dụng AI trong học tập & NC kinh tế</span>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 space-y-1">
+          <div class="flex justify-between items-center text-sm font-semibold text-white">
+            <span><i class="fa-solid fa-music text-indigo-400 mr-2"></i>Đánh đàn</span>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 space-y-1">
+          <div class="flex justify-between items-center text-sm font-semibold text-white">
+            <span><i class="fa-solid fa-people-group text-indigo-400 mr-2"></i>Làm việc nhóm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SỞ THÍCH -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-heart text-indigo-400"></i> 5. Sở thích
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div class="p-4 rounded-xl bg-gray-900/40 border border-gray-800 hover:border-indigo-500/50 transition-colors">
+          <i class="fa-solid fa-guitar text-2xl text-indigo-400 mb-2"></i>
+          <p class="text-sm font-medium text-gray-200">Đánh đàn</p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/40 border border-gray-800 hover:border-indigo-500/50 transition-colors">
+          <i class="fa-solid fa-basketball text-2xl text-indigo-400 mb-2"></i>
+          <p class="text-sm font-medium text-gray-200">Bóng rổ</p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/40 border border-gray-800 hover:border-indigo-500/50 transition-colors">
+          <i class="fa-solid fa-gamepad text-2xl text-indigo-400 mb-2"></i>
+          <p class="text-sm font-medium text-gray-200">Chơi game</p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/40 border border-gray-800 hover:border-indigo-500/50 transition-colors">
+          <i class="fa-solid fa-mug-hot text-2xl text-indigo-400 mb-2"></i>
+          <p class="text-sm font-medium text-gray-200">Học ở quán cà phê</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MÔN HỌC YÊU THÍCH -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-book-open text-indigo-400"></i> 6. Môn học yêu thích
+      </h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-gradient-to-br from-indigo-900/30 to-purple-900/20 border border-indigo-500/20 text-center">
+          <span class="text-2xl font-bold text-indigo-400">Toán</span>
+        </div>
+        <div class="p-4 rounded-xl bg-gradient-to-br from-indigo-900/30 to-purple-900/20 border border-indigo-500/20 text-center">
+          <span class="text-2xl font-bold text-indigo-400">Lý</span>
+        </div>
+        <div class="p-4 rounded-xl bg-gradient-to-br from-indigo-900/30 to-purple-900/20 border border-indigo-500/20 text-center">
+          <span class="text-2xl font-bold text-indigo-400">Anh</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. MỤC TIÊU CÁ NHÂN -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-bullseye text-indigo-400"></i> 7. Mục tiêu cá nhân
+      </h2>
+      <div class="space-y-3">
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 flex items-center gap-4">
+          <div class="p-3 bg-purple-500/20 rounded-lg text-purple-400"><i class="fa-solid fa-plane-departure text-xl"></i></div>
+          <div>
+            <h3 class="font-semibold text-white">Sinh sống và làm việc ở nước ngoài</h3>
+            <p class="text-xs text-gray-400">Mở rộng góc nhìn toàn cầu và trải nghiệm môi trường quốc tế.</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 flex items-center gap-4">
+          <div class="p-3 bg-indigo-500/20 rounded-lg text-indigo-400"><i class="fa-solid fa-building-user text-xl"></i></div>
+          <div>
+            <h3 class="font-semibold text-white">Mở công ty và phát triển doanh nghiệp</h3>
+            <p class="text-xs text-gray-400">Xây dựng giải pháp kinh doanh giá trị và tự chủ doanh nghiệp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CHỨNG CHỈ VÀ THÀNH TÍCH -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-trophy text-amber-400"></i> 8. Chứng chỉ & Thành tích
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-start gap-3">
+          <i class="fa-solid fa-award text-amber-400 text-2xl mt-0.5"></i>
+          <div>
+            <h3 class="font-bold text-amber-200">Giải Ba Kinh tế Quốc tế IEO</h3>
+            <p class="text-xs text-amber-300/70">International Economics Olympiad</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-500/10 border border-slate-400/20 flex items-start gap-3">
+          <i class="fa-solid fa-medal text-slate-300 text-2xl mt-0.5"></i>
+          <div>
+            <h3 class="font-bold text-slate-200">Huy chương Bạc Quốc gia môn Toán</h3>
+            <p class="text-xs text-slate-300/70">Kỳ thi Olympic Toán học FMO</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-start gap-3">
+          <i class="fa-solid fa-flask text-indigo-400 text-2xl mt-0.5"></i>
+          <div>
+            <h3 class="font-bold text-indigo-200">Giải Nhì Nghiên cứu khoa học</h3>
+            <p class="text-xs text-indigo-300/70">Cấp trường THPT</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-start gap-3">
+          <i class="fa-solid fa-rocket text-emerald-400 text-2xl mt-0.5"></i>
+          <div>
+            <h3 class="font-bold text-emerald-200">Giải Nhất Khởi nghiệp</h3>
+            <p class="text-xs text-emerald-300/70">Cấp trường THPT</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-amber-700/10 border border-amber-700/20 flex items-start gap-3">
+          <i class="fa-solid fa-basketball text-amber-600 text-2xl mt-0.5"></i>
+          <div>
+            <h3 class="font-bold text-amber-100">Huy chương Đồng Bóng rổ TBL</h3>
+            <p class="text-xs text-amber-300/70">Giải bóng rổ TBL</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-start gap-3">
+          <i class="fa-solid fa-globe text-purple-400 text-2xl mt-0.5"></i>
+          <div>
+            <h3 class="font-bold text-purple-200">Tham gia IEO Open Track</h3>
+            <p class="text-xs text-purple-300/70">Thách thức kinh tế mở rộng</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MỘT ĐIỀU THÚ VỊ VỀ TÔI -->
+    <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 class="text-xl font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+        <i class="fa-solid fa-lightbulb text-amber-300"></i> 9. Một điều thú vị về tôi
+      </h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 text-center space-y-2">
+          <i class="fa-solid fa-handshake text-2xl text-indigo-400"></i>
+          <p class="text-sm text-gray-300">Sẵn sàng làm việc & hợp tác với tất cả mọi người.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 text-center space-y-2">
+          <i class="fa-solid fa-chart-line text-2xl text-indigo-400"></i>
+          <p class="text-sm text-gray-300">Luôn sẵn lòng chia sẻ các kiến thức liên quan đến kinh tế.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-gray-900/50 border border-gray-800 text-center space-y-2">
+          <i class="fa-solid fa-guitar text-2xl text-indigo-400"></i>
+          <p class="text-sm text-gray-300">Có thể đánh một bản đàn guitar cho bạn nghe bất cứ lúc nào!</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 text-xs text-gray-500 border-t border-gray-800/50">
+    <p>© 2026 Phan Quang Nhật • Class 12A10 (STT: 27)</p>
+  </footer>
+
+  <!-- JavaScript cho hiệu ứng tương tác -->
+  <script>
+    // Cuộn trang mượt mà
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Hiệu ứng Fade In xuất hiện dần khi cuộn trang
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-6');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700', 'ease-out');
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
